@@ -1,8 +1,22 @@
 <?php
-	$conn = new mysqli('us-cdbr-east-04.cleardb.com', 'bad6f482309708', 'e410cc68', 'heroku_b648a05cf138ff9');
+	// $conn = new mysqli('us-cdbr-east-04.cleardb.com:3306', 'bad6f482309708', 'e410cc68', 'heroku_b648a05cf138ff9');
+
+	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+
+	$server = $url["us-cdbr-east-04.cleardb.com:3306"];
+	$username = $url["bad6f482309708"];
+	$password = $url["e410cc68"];
+	$db = substr($url["heroku_b648a05cf138ff9"], 1);
+	
+	$conn = new mysqli($server, $username, $password, $db);
 
 	if ($conn->connect_error) {
 	    die("Connection failed: " . $conn->connect_error);
 	}
+
 	
+
+
+
+
 ?>
