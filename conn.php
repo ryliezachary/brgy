@@ -3,10 +3,10 @@
 
 	$url = parse_url(getenv("CLEARDB_DATABASE_URL"));
 
-	$server = $url["us-cdbr-east-04.cleardb.com:3306"];
-	$username = $url["bad6f482309708"];
-	$password = $url["e410cc68"];
-	$db = substr($url["heroku_b648a05cf138ff9"], 1);
+	$server = $url["host"];
+	$username = $url["user"];
+	$password = $url["pass"];
+	$db = substr($url["path"], 1);
 	
 	$conn = new mysqli($server, $username, $password, $db);
 
