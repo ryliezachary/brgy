@@ -90,10 +90,10 @@
               <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1" checked>
               <label class="form-check-label" for="inlineCheckbox1">Last Name</label>
             </div>
-            <div class="form-check form-check-inline">
+            <!-- <div class="form-check form-check-inline">
               <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2" checked>
               <label class="form-check-label" for="inlineCheckbox2">Middle Name</label>
-            </div>
+            </div> -->
             <input type="submit" onclick="move()" class="btn btn-primary">
             <!-- <button class="btn btn-primary" type="submit" onclick="move()">Search</button> -->
 
